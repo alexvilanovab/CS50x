@@ -1,0 +1,30 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is an obscure term ostensibly referring to a lung disease caused by silica dust,
+    sometimes cited as one of the longest words in the English language.
+    
+1.  getrusage() returns resource usage measures for 'who', which can be one of the following:
+        RUSAGE_SELF: Return resource usage statistics for the calling process.
+        RUSAGE_CHILDREN: Return resource usage statistics for all children of the calling process that have terminated and been
+        waited for.
+        RUSAGE_THREAD: Return resource usage statistics for the calling thread.
+
+2.  A total of sixteen members
+
+3.  Passing a struct as it is 'before' or 'after' to 'calculate' in form of value might be slow and might cost a lot of memory. If
+    instead we pass them by reference, we will not have to keep placing copies of them on the stack over and over again.
+
+4.  We will be getting each character from fp until we find the end of the file (EOF). For each loop cycle fp cursor will advance
+    one character and store it in 'c'. If 'c' equals 'EOF' it will mean that we have reached the end of the file and the for loop
+    will die.
+    Once we have a character on our variable 'c':
+        If it is an alphabetical or an apostrophe character, we will keep it and append it to the word that is being created (if the
+        word that we are creating is too long, it will be ignored).
+        If it is numerical, the word will be ignored and the cursor will skip to where the next word begins.
+        If it is an end word character character it means that the previous word has ended. We just found a new word.
+        
+5.  If we use fscanf with a format string like "%s" we will not be able to know where words end, break line characters would become
+    blank. If we do not know where words end we will be counting the entire file as a word and our program would break. If we want
+    to use fscanf with string formaters, we will have to change the style of our key.txt (adding spaces between words instead of
+    break line characters, for example).
+    
+6.  We do not have to edit anything on 'check' and 'load' functions, declaring their parameters as constant is a very good practice
+    to prevent us to accidentally edit anything.
