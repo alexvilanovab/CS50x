@@ -1,0 +1,17 @@
+1.  stdint.h is a header file in the C standard library that allows us to provide a set of typedefs that specify exact-width integer
+    types, together with the defined minimum and maximum allowable values for each type, using macros.
+2.  using those integer types we can define integers with a width of exactly 8, 32 and 16 bit. 'uint' makes reference to unsigned
+    integer and 'int' to signed integer.
+3.  1, 4, 4 and 2 bytes.
+4.  'BM' (0x42 0x4D).
+5.  biSize is the size of the BITMAPINFOHEADER, it's always 40 bytes. bfSize is the size of the whole file which consists of the
+    image itself (non-fixed value), the BITMAPINFOHEADER (40 bytes) and the BITMAPFILEHEADER (14 bytes).
+6.  if biHeight is negative, the bitmap is a top-down device-independent bitmap (rgb-pixel table) with the origin at the upper left
+    corner.
+7.  biBitCount.
+8.  in line 24 it might return null if the file doesn't exist in that directory, in line 32 it might if the user who is running the
+    program hasn't got permission to create or modify files.
+9.  because we want to read a single element BITMAPFILEHEADER on the first call and BITMAPINFOHEADER on the second one.
+10. 3.
+11. fseek keeps track of where in the file we are. in copy.c line 84 it moves 'padding' bytes forward.
+12. SEEK_CUR is the current cursor position in the file.
